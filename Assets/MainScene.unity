@@ -731,7 +731,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 7, y: 7}
+  m_Size: {x: 4, y: 4}
 --- !u!114 &1624468936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,7 +743,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7523f59a0d5a146efa8a95ed693f3739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.15
+  speed: 0.1
+  timeDiff: 1
 --- !u!1 &1726398853
 GameObject:
   m_ObjectHideFlags: 0
