@@ -190,7 +190,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -278, y: -198}
+  m_AnchoredPosition: {x: -193.9, y: -161.7}
   m_SizeDelta: {x: 238, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &158663317
@@ -731,7 +731,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 4, y: 4}
+  m_Size: {x: 7, y: 7}
 --- !u!114 &1624468936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,7 +745,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.1
   timeDiff: 0.5
-  tipo: 0
+  sprites:
+  - {fileID: 21300000, guid: 2ceb2455f4d2340989917d8019ed854a, type: 3}
+  - {fileID: 21300000, guid: 0f698c6de58f04bafb3bcaddbacea2ef, type: 3}
+  - {fileID: 21300000, guid: 2ba0f396477a84beabdf365e0b7af036, type: 3}
+  - {fileID: 21300000, guid: 9920d04e30d43494d9c13468454e1b71, type: 3}
+  - {fileID: 21300000, guid: 9916a38a0411540d3ae6dc3279067726, type: 3}
+  - {fileID: 21300000, guid: db947778e084e4999973b50447d74bfa, type: 3}
+  - {fileID: 21300000, guid: dc792a0b748a8439a9cebd33c936e731, type: 3}
+  - {fileID: 21300000, guid: 3223e11b410c94b07a3063eb5b3a725a, type: 3}
+  - {fileID: 21300000, guid: efad16df5fa864f11a5d3fdccedc376a, type: 3}
+  - {fileID: 21300000, guid: 20db615d0a392435d9de3bf614b65d34, type: 3}
+  - {fileID: 21300000, guid: 654f19645a8c74cb1b7a33337c596118, type: 3}
+  - {fileID: 21300000, guid: 94fd60c2a46134be0bf6232ccc6a5921, type: 3}
+  - {fileID: 21300000, guid: feb771d0584004355bdd1f35ed09bbe3, type: 3}
+  - {fileID: 21300000, guid: 2754db8a8a6d64b0cb7ba181304c8b7b, type: 3}
+  - {fileID: 21300000, guid: 06c517548054342d4a3d9dc0031f9ea8, type: 3}
+  - {fileID: 21300000, guid: 0d1a9dd925cb6480ca530f52cd9f07c4, type: 3}
+  - {fileID: 21300000, guid: b99e235d95b044e05ba3f6a2db0de2f4, type: 3}
+  - {fileID: 21300000, guid: 8cc9731d0e61f4276bd52593a15858a3, type: 3}
+  - {fileID: 21300000, guid: 9de0634564f2446f7ad5dfee6621d686, type: 3}
+  - {fileID: 21300000, guid: 408f8c72698814cdab664ddff3eac372, type: 3}
 --- !u!1 &1726398853
 GameObject:
   m_ObjectHideFlags: 0
