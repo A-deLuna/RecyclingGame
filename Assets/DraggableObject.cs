@@ -18,12 +18,13 @@ public class DraggableObject : MonoBehaviour
     // Update is called once per frame	
     void OnMouseDrag()
     {
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved && touchEnabled)
+        if (Input.GetMouseButton(0) && touchEnabled)
         {
             // Get movement of the finger since last frame
             // Move object across XY plane
-            Vector3 pos = Camera.main.ScreenToWorldPoint(new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, 5));
-            transform.position = new Vector3(pos.x, pos.y, 0);
+            Vector3 pos = Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 10));
+            transform.position = new Vector3(pos.x, pos.y , 0);
+
         }
     }
 

@@ -744,7 +744,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  timeDiff: 1
+  timeDiff: 0.5
+  tipo: 0
 --- !u!1 &1726398853
 GameObject:
   m_ObjectHideFlags: 0
