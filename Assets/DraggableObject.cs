@@ -17,7 +17,7 @@ public class DraggableObject : MonoBehaviour
     private float timeToEnable = 0.0f;
 	public Sprite[] sprites;
 	private Color tipo;
-
+	private bool fingerDown= false;
     void Start()
     {
 		GenerateNextObject ();
@@ -26,7 +26,7 @@ public class DraggableObject : MonoBehaviour
     // Update is called once per frame	
     void OnMouseDrag()
     {
-        if (Input.GetMouseButton(0) && touchEnabled)
+        if (Input.GetMouseButton(0) && touchEnabled && fingerDown)
         {
             // Get movement of the finger since last frame
             // Move object across XY plane
@@ -35,6 +35,11 @@ public class DraggableObject : MonoBehaviour
 
         }
     }
+
+	void OnMouseDown() {
+		fingerDown = true;	
+	}
+
 
     void Update()
     {
@@ -56,20 +61,21 @@ public class DraggableObject : MonoBehaviour
         {           
         	correct();                     
         }
-		if (other.gameObject.tag == "Brown" && tipo == Color.BROWN)
+		else if (other.gameObject.tag == "Brown" && tipo == Color.BROWN)
         {
             correct();   
         }
-		if (other.gameObject.tag == "Green" && tipo == Color.GREEN)
+		else if (other.gameObject.tag == "Green" && tipo == Color.GREEN)
 		{
 			correct ();
 		} 
-		if (other.gameObject.tag == "Black" && tipo == Color.BLACK)
+		else if (other.gameObject.tag == "Black" && tipo == Color.BLACK)
         {
             correct();
         }
-		incorrect ();
+		else incorrect ();
    		GenerateNextObject ();
+		fingerDown = false;
     }
 
 	void GenerateNextObject() {
@@ -125,6 +131,7 @@ public class DraggableObject : MonoBehaviour
 
     void incorrect()
     {
-
+		Debug.Log ("Incorrect");
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("EndGameScene");
     }
 }
