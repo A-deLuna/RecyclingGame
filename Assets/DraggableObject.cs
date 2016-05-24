@@ -18,9 +18,19 @@ public class DraggableObject : MonoBehaviour
 	public Sprite[] sprites;
 	private Color tipo;
 	private bool fingerDown= false;
+	private AudioSource source;
+	private int life=0;
+	public AudioClip s1,s2;
+	
+	void Awake()
+	{
+		source=GetComponent<AudioSource>();
+	}
     void Start()
     {
 		GenerateNextObject ();
+		//aud=this.GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame	
@@ -126,12 +136,22 @@ public class DraggableObject : MonoBehaviour
 
     void correct()
     {
+    	//aud.Play();
+    	source.PlayOneShot(s1,1f);
 		ScoreManager.score++;
     }
 
     void incorrect()
     {
-		Debug.Log ("Incorrect");
+    	life++;
+    	source.PlayOneShot(s2,1f);
+    	if(life==1)
+    	Destroy(GameObject.FindWithTag("v3"));
+    	if(life==2)
+    	Destroy(GameObject.FindWithTag("v2"));
+    	if(life==3)
+    	Destroy(GameObject.FindWithTag("v1"));
+		if(life==4)
 		UnityEngine.SceneManagement.SceneManager.LoadScene ("EndGameScene");
     }
 }
